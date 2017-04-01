@@ -1,0 +1,7 @@
+{
+  "dir": "keymaps/",
+  "maps": [
+    {"filename": "disable_keyboard.reg", "description": "Disables all keys in keyboard except Ctrl, Alt, Delete, Shift", "author": "Eli", "time": "27/03/2017 22:00:00"},
+    {"filename": "enable_keyboard.reg", "description": "Enables all keys in keyboard", "author": "Eli", "time": "27/03/2017 22:00:00"}
+  ]
+}

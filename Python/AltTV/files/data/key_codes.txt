@@ -1,0 +1,112 @@
+29       #		~ `         
+#02      #       ! 1         
+#03      #       @ 2         
+#04      #       # 3         
+#05      #       $ 4         
+#06      #       % 5         
+#07      #       ^ 6         
+#08      #       & 7         
+#09      #       * 8         
+#0A      #       ( 9         
+#0B      #       ) 0         
+0C       #       _ -         
+0D       #       + =         
+0E       #       Backspace   
+0F       #       Tab         
+10       #       Q           
+11       #       W           
+12       #       E           
+13       #       R           
+14       #       T           
+15       #       Y           
+16       #       U           
+17       #       I           
+18       #       O           
+19       #       P           
+1A       #       { [         
+1B       #       } ]         
+2B       #       | \         
+3A       #       Caps Lock   
+1E       #       A           
+1F       #       S           
+20       #       D           
+21       #       F           
+22       #       G           
+23       #       H           
+24       #       J           
+25       #       K           
+26       #       L           
+27       #       : ;         
+28       #       " '         
+2B       #       (in'tl )    
+1C       #       Enter       
+#2A      #       L SHIFT     
+56       #       (in'tl )    
+2C       #       Z           
+2D       #       X           
+2E       #       C           
+2F       #       V           
+30       #       B           
+31       #       N           
+32       #       M           
+33       #       < ,         
+34       #       > .         
+35       #       ? /         
+73       #       (in'tl )    
+#36      #       R SHIFT     
+#1D      #       L CTRL      
+#38      #       L ALT       
+39       #       Space Bar   
+#E0,38   #       R ALT       
+#E0,1D   #       R CTRL      
+E0,52    #       Insert      
+#E0,53   #       Delete      
+E0,4B    #       L Arrow     
+E0,47    #       Home        
+E0,4F    #       End         
+E0,48    #       Up Arrow    
+E0,50    #       Dn Arrow    
+E0,49    #       Page Up     
+E0,51    #       Page Down   
+E0,4D    #       R Arrow     
+45       #       Num Lock    
+#47       #       Numeric 7   
+#4B       #       Numeric 4   
+#4F       #       Numeric 1   
+E0,35    #       Num /       
+E0,B5    #       LS+Num /    
+E0,B6    #       RS+Num /    
+#48       #       Numeric 8   
+#4C       #       Numeric 5   
+#50       #       Numeric 2   
+#52       #       Numeric 0   
+37       #       Numeric *   
+#49       #       Numeric 9   
+#4D       #       Numeric 6   
+#51       #       Numeric 3   
+53       #       Numeric .   
+4A       #       Numeric -   
+4E       #       Numeric +   
+7E       #       (in'tl )    
+E0,1C    #       NumEnter    
+01       #       Esc         
+3B       #       F1          
+3C       #       F2          
+3D       #       F3          
+3E       #       F4          
+3F       #       F5          
+40       #       F6          
+41       #       F7          
+42       #       F8          
+43       #       F9          
+44       #       F10         
+57       #       F11         
+58       #       F12         
+E0,A2    #       PrintScreen 
+E0,37    #       Ctl+PrtScrn 
+E0,37    #       Shft+PrtScrn
+54       #       Alt+PrtScrn 
+46       #       Scroll Lock 
+E0,5B    #              
+E0,5C    #
+E0,5D    #

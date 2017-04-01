@@ -1,0 +1,107 @@
+<!doctype html>
+<html ng-app="AltTVWebGui">
+<head>
+    <title>AltTV Web GUI</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="js/app_main.js"></script>
+    <script src="js/app_monitors.js"></script>
+    <script src="js/app_keymaps.js"></script>
+    <link href="//cdn.muicss.com/mui-0.9.12/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.9.12/js/mui.min.js"></script>
+</head>
+<body>
+<div ng-controller="MonitorCtrl" class="mui-container">
+    <form class="mui-form">
+    <legend>Monitors</legend>
+    </form>
+    <table class="mui-table mui-table--bordered">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Process Name</th>
+                <th>Last Update Time</th>
+                <th>Monitor Running</th>
+                <th>Monitor Enabled</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="monitor in monitors">
+                <td ng-style="monitor.colorStyle"></td>
+                <td>{{ monitor.processName }}</td>
+                <td>{{ monitor.statusLastUpdate }}</td>
+                <td>{{ monitor.monitorRunning }}</td>
+                <td>{{ monitor.monitorEnabled }}</td>
+                <td ng-repeat="action in monitor.actions" class="action">
+                    <button class="mui-btn" ng-click="action.target(monitor.id)" ng-enabled="editing != monitor.id">
+                        {{ action.text }}
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <form class="mui-form">
+        <legend>Create New Monitor</legend>
+        <div class="mui-textfield">
+            <input type="text" ng-model="monitor_name">
+            <label>Monitor Name</label>
+        </div>
+
+        <div class="mui-textfield">
+            <input type="text" ng-model="process_name">
+            <label>Process Name</label>
+        </div>
+
+        <div class="mui-textfield">
+            <input type="text" ng-model="init_path">
+            <label>Initial Path</label>
+        </div>
+
+        <div class="mui-textfield">
+            <input type="text" ng-model="recovery_path">
+            <label>Recovery Path</label>
+        </div>
+
+        <div class="mui-textfield">
+            <input type="text" ng-model="interval">
+            <label>Monitoring Interval</label>
+        </div>
+
+        <div class="mui-textfield">
+            <input type="text" ng-model="tolerance">
+            <label>Non-Responding Tolerance</label>
+        </div>
+
+        <button type="submit" ng--click="SubmitMonitor();" class="mui-btn mui-btn--raised">{{ editButtonLabel }}</button>
+        <button type="submit" ng--click="ClearForm();" ng-hide="editing==-1" class="mui-btn mui-btn--raised">Discard</button>
+    </form>
+    {{errorString}}
+</div>
+<div class="mui-divider"></div>
+<div ng-controller="KeyMapsCtrl" class="mui-container">
+    <form class="mui-form">
+  <legend>Key Maps</legend>
+  <div class="mui-select">
+    <select ng-model="currentId">
+      <option ng-repeat="map in keymaps" ng-click="Selected(map.id);" ng-selected="map.id==currentId" value="{{map.id}}">{{map.filename}}</option>
+    </select>
+    <label>Select KeyMap File</label>
+  </div>
+  <div class="mui-checkbox">
+    <label>
+      <input type="checkbox" value="" ng-model="rebootAfterActivation">
+      Reboot After Activation
+    </label>
+  </div>
+  <div class="mui-select" ng-hide="!rebootAfterActivation">
+      <input type="text" ng-model="timeToReboort">
+    <label>Time Before Reboot</label>
+  </div>
+  <button type="submit" class="mui-btn mui-btn--raised" ng-click="ActivateKeyMap();">Activate</button> <br>
+        {{keymaps[currentId].description}} - created by {{keymaps[currentId].author}} on {{keymaps[currentId].time}}
+</form>
+</div>
+</body>
+</html>
